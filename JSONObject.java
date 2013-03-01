@@ -1459,6 +1459,9 @@ public class JSONObject {
         if (value.getClass().isArray()) {
             return new JSONArray(value).toString();
         }
+        if (value instanceof RawJSON) {
+            return value.toString();
+        }
         return quote(value.toString());
     }
 
