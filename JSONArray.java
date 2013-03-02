@@ -31,6 +31,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.ListIterator;
 import java.util.Map;
 
 /**
@@ -84,13 +85,17 @@ public class JSONArray {
     /**
      * The arrayList where the JSONArray's properties are kept.
      */
-    private final ArrayList myArrayList;
+    public final ArrayList myArrayList;
 
     /**
      * Construct an empty JSONArray.
      */
     public JSONArray() {
         this.myArrayList = new ArrayList();
+    }
+    
+    public ListIterator<Object> listIterator(){
+    	return this.myArrayList.listIterator();
     }
 
     /**
