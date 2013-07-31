@@ -14,11 +14,12 @@ else
                 echo "No change to hash."
         else
                 build=1
-                echo "$newHash" > ../../sums/JSONjavaBuild
         fi
 fi
 
 if [ "$build" -gt 0 ]
 then
         gradle jar uploadArchives --parallel --daemon
+        touch ../../sums/JSONjavaBuild
+        echo "$newHash" > ../../sums/JSONjavaBuild
 fi
