@@ -1,5 +1,5 @@
 oldHash="$(cat ../../sums/JSONjavaBuild)"
-newHash="$(tar c .git/* | md5sum)"
+newHash="$(tar c .git/refs/ | md5sum)"
 echo oldHash: $oldHash
 echo newHash: $newHash
 
