@@ -1,1 +1,1 @@
-gradle jar uploadArchives
+gradle jar uploadArchives --parallel --daemon
